@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
+    <title>Fullscreen Video</title>
+    <style>
+        /* إزالة الهوامش وجعل الصفحة تملأ الشاشة بالكامل */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black; /* لون خلفية أسود */
+        }
+
+        /* جعل الفيديو يملأ الصفحة */
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* تأكد أن الفيديو يغطي الشاشة بدون فراغات */
+        }
+    </style>
 </head>
 <body>
-    <h1>My Video</h1>
-    <video controls width="640" height="360">
+    <video controls autoplay>
         <source src="video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
