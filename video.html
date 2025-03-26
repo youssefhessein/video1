@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player1</title>
+    <title>Video Player</title>
     <style>
-        /* ضبط الفيديو ليأخذ العرض الكامل والارتفاع التلقائي */
+        /* إزالة الهوامش والتأكد من أن الفيديو يغطي كامل الشاشة */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* لإخفاء الشريط الأفقي والرأسي */
+        }
+
         video {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* لجعل الفيديو يغطي الشاشة بالكامل */
-        }
-        body, html {
-            margin: 0;
-            height: 100%;
-            overflow: hidden; /* لإخفاء أي تمرير */
+            object-fit: fill; /* جعل الفيديو يملأ الشاشة بالكامل */
         }
     </style>
 </head>
@@ -25,3 +27,4 @@
     </video>
 </body>
 </html>
+
